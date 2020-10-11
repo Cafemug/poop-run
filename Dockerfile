@@ -1,9 +1,10 @@
 FROM node:lts
 
-WORKDIR /poop-run
+
 
 
 COPY ./poop-run /poop-run
-RUN node install
+WORKDIR /poop-run
+RUN yarn install
 
 CMD ["node", "main.js"]
